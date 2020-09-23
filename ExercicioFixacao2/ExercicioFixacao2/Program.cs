@@ -19,7 +19,7 @@ namespace ExercicioFixacao2
             int idade = int.Parse(vetor[1]);
             double altura = double.Parse(vetor[2]);
 
-            Console.WriteLine("=================================");
+            Console.WriteLine("================================");
             Console.WriteLine(nome + "\n" + quartos + "\n" + preco.ToString("F2") + "\n" + sobrenome + "\n" + idade + "\n" + altura.ToString("F2"));
         }
     }
