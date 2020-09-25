@@ -24,7 +24,7 @@ namespace SaidaDeDados
             Console.WriteLine("{0} tem {1} anos e tem saldo igual a R${2:F2} reais",nome, idade, saldo); // PLACEHOLDER
 
             Console.WriteLine($"{nome} tem {idade} anos e tem saldo igual a {saldo:F2} reais"); // INTERPOLAÇÃO
-
+            Console.WriteLine("");
             Console.WriteLine(nome + " tem " + idade + " anos e tem saldo igual a " + saldo.ToString("F2") + " reais"); //Concatenacao
             Console.WriteLine("");
         }
