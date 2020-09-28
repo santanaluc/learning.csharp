@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30503.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EscopoInicializacao", "EscopoInicializacao\EscopoInicializacao.csproj", "{BBE575C4-F99C-4B10-A86C-049281B9D007}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BBE575C4-F99C-4B10-A86C-049281B9D007}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBE575C4-F99C-4B10-A86C-049281B9D007}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBE575C4-F99C-4B10-A86C-049281B9D007}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBE575C4-F99C-4B10-A86C-049281B9D007}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FEF8416F-785A-4DF9-A3EE-542DA500B338}
+	EndGlobalSection
+EndGlobal
