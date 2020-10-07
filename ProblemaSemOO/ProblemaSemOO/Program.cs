@@ -8,24 +8,28 @@ namespace ProblemaSemOO
         {
             Console.WriteLine("Entre com as medidas do triângulo X: ");
 
-            double ax, bx, cx;
-            ax = double.Parse(Console.ReadLine());
-            bx = double.Parse(Console.ReadLine());
-            cx = double.Parse(Console.ReadLine());
+            Triangulo x, y;
+
+            x = new Triangulo();
+            y = new Triangulo();
+            
+            x.A = double.Parse(Console.ReadLine());
+            x.B = double.Parse(Console.ReadLine());
+            x.C = double.Parse(Console.ReadLine());
 
             Console.WriteLine("Entre com as medidas do triângulo Y:");
 
-            double ay, by, cy;
-            ay = double.Parse(Console.ReadLine());
-            by = double.Parse(Console.ReadLine());
-            cy = double.Parse(Console.ReadLine());
+            
+            y.A = double.Parse(Console.ReadLine());
+            y.B = double.Parse(Console.ReadLine());
+            y.C = double.Parse(Console.ReadLine());
 
             //Conta X:
-            double p = (ax + bx + cx) / 2.0;
-            double areaX = Math.Sqrt(p * (p - ax) * (p - bx) * (p - cx));
+            double p = (x.A + x.B + x.C) / 2.0;
+            double areaX = Math.Sqrt(p * (p - x.A) * (p - x.B) * (p - x.C));
             //Conta Y:
-            p = (ay + by + cy) / 2.0;
-            double areaY = Math.Sqrt(p * (p - ay) * (p - by) * (p - cy));
+            p = (y.A + y.B + y.C) / 2.0;
+            double areaY = Math.Sqrt(p * (p - y.A) * (p - y.B) * (p - y.C));
 
             Console.WriteLine("Área de X = " + areaX.ToString("F4"));
             Console.WriteLine("Área de Y = " + areaY.ToString("F4"));
