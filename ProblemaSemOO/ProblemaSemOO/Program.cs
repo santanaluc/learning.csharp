@@ -18,7 +18,6 @@ namespace ProblemaSemOO
             x.C = double.Parse(Console.ReadLine());
 
             Console.WriteLine("Entre com as medidas do triângulo Y:");
-
             
             y.A = double.Parse(Console.ReadLine());
             y.B = double.Parse(Console.ReadLine());
