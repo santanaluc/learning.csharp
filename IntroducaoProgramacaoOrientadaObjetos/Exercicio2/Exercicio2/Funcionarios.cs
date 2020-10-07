@@ -8,5 +8,10 @@ namespace Exercicio2
     {
         public string Nome;
         public double Salario;
+
+        public double MediaSalario(double a, double b)
+        {
+            return (a + b) / 2.0;
+        }
     }
 }

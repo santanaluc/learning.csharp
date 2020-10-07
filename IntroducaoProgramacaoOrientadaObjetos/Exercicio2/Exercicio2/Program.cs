@@ -6,9 +6,10 @@ namespace Exercicio2
     {
         static void Main(string[] args)
         {
-            Funcionarios a, b;
+            Funcionarios a, b, c;
             a = new Funcionarios();
             b = new Funcionarios();
+            c = new Funcionarios();
 
             Console.WriteLine("Dados do primeiro funcionário:");
             Console.Write("Nome: ");
@@ -22,7 +23,7 @@ namespace Exercicio2
             Console.Write("Salário: ");
             b.Salario = double.Parse(Console.ReadLine());
 
-            double media = (a.Salario + b.Salario) / 2.00;
+            double media = c.MediaSalario(a.Salario, b.Salario);
 
             Console.WriteLine("Salário médio = " + media.ToString("F2"));
         }
