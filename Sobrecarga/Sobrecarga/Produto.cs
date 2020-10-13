@@ -12,23 +12,20 @@ namespace Construtores
         public double Preco;
         public int Quantidade;
 
-
-        //Construtor padrão (0 argumentos) 
         public Produto()
         {
-
+            Quantidade = 10;
         }
 
         //Contrutor de 2 argumentos
-        public Produto(string nome, double preco)
+        public Produto(string nome, double preco) : this() //reaproveitando a quantidade acima
         {
             Nome = nome;
             Preco = preco;
-            //Quantidade começará no valor 0 (por padrão)
         }
 
         //Construtor de 3 argumento
-        public Produto(string nome, double preco, int quantidade)
+        public Produto(string nome, double preco, int quantidade) : this(nome, preco)
         {
             Nome = nome;
             Preco = preco;
