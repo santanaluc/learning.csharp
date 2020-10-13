@@ -9,11 +9,10 @@ namespace SobrecargaConstrutores
         {
             Produto p = new Produto("TV", 500.00, 10);
 
-            Console.WriteLine(p.GetNome());
-            p.SetNome("TV 4K");
-            Console.WriteLine(p.GetNome());
-            Console.WriteLine(p.GetPreco());
-            Console.WriteLine(p.GetQuantidade());
+            Console.WriteLine(p.Nome);
+            p.Nome = "TV 4K";
+            Console.WriteLine(p.Nome);
+            Console.WriteLine(p.Preco);
         }
     }
 }
