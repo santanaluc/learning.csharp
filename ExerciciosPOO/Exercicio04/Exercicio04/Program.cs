@@ -15,7 +15,7 @@ namespace Exercicio04
             Console.Write("Haverá depósito inicial (s/n)? ");
             char sn = char.Parse(Console.ReadLine());
 
-            if (sn == 's')
+            if (sn == 's' || sn == 'S')
             {
                 Console.Write("Entre com o valor de depósito inicial: ");
                 double deposito = double.Parse(Console.ReadLine());
