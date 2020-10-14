@@ -6,12 +6,12 @@ namespace Exercicio04
     {
         static void Main(string[] args)
         {
-            ContaBancaria c = new ContaBancaria();
+            ContaBancaria c;
 
             Console.Write("Entre com o número da conta: ");
-            c.Conta = int.Parse(Console.ReadLine());
+            int numero = int.Parse(Console.ReadLine());
             Console.Write("Entre o titular da conta: ");
-            c.Nome = Console.ReadLine();
+            string nome = Console.ReadLine();
             Console.Write("Haverá depósito inicial (s/n)? ");
             char sn = char.Parse(Console.ReadLine());
 
@@ -19,10 +19,10 @@ namespace Exercicio04
             {
                 Console.Write("Entre com o valor de depósito inicial: ");
                 double deposito = double.Parse(Console.ReadLine());
-                c.Deposito(deposito);
+                c = new ContaBancaria(numero, nome, deposito);
             } else
             {
-                return;
+                c = new ContaBancaria(numero, nome);
             }
 
             Console.WriteLine();

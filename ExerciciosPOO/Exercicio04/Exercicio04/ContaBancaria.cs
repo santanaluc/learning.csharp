@@ -6,17 +6,22 @@ namespace Exercicio04
 {
     class ContaBancaria
     { 
-        private string _nome;
-        private readonly double _valor;
-        private double _saldo;
-        public int Conta { get; set; }
+        public string Nome { get; set; }
+        public double Saldo { get; private set; }
+        public int Conta { get; private set; }
 
-        public ContaBancaria()
+        public ContaBancaria(int numero, string titular)
         {
-
+            Conta = numero;
+            Nome = titular;
         }
 
-        public string Nome
+        public ContaBancaria(int numero, string titular, double saldo) : this(numero, titular)
+        {
+            Saldo = saldo;
+        }
+
+        /*public string Nome
         {
             get { return _nome; }
             set
@@ -29,23 +34,23 @@ namespace Exercicio04
                     Console.WriteLine("ERROR");
                 }
             }
-        }
+        }*/
 
         public double Deposito(double valor)
         {
-            return _saldo += valor;
+            return Saldo += valor;
         }
 
         public double Saque(double valor)
         {
-            return _saldo -= valor + 5.00;
+            return Saldo -= valor + 5.00;
         }
 
         public override string ToString()
         {
             return "Dados da conta atualizados: \nConta " 
                 + Conta + ", "
-                + "Titular: " + _nome + ", Saldo: $" + _saldo.ToString("F2");
+                + "Titular: " + Nome + ", Saldo: $" + Saldo.ToString("F2");
         }
     }
 }
