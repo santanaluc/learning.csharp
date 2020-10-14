@@ -7,7 +7,7 @@ namespace Exercicio04
     class ContaBancaria
     { 
         private string _nome;
-        private double _valor;
+        private readonly double _valor;
         private double _saldo;
         public int Conta { get; set; }
 
@@ -33,19 +33,19 @@ namespace Exercicio04
 
         public double Deposito(double valor)
         {
-            return _saldo = _valor + valor;
+            return _saldo += valor;
         }
 
         public double Saque(double valor)
         {
-            return _saldo = _valor - valor;
+            return _saldo -= valor + 5.00;
         }
 
         public override string ToString()
         {
-            return "Conta " 
+            return "Dados da conta atualizados: \nConta " 
                 + Conta + ", "
-                + "Titlar: " + _nome + ", Saldo: $" + _saldo;
+                + "Titular: " + _nome + ", Saldo: $" + _saldo.ToString("F2");
         }
     }
 }

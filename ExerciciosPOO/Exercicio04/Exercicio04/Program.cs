@@ -25,6 +25,20 @@ namespace Exercicio04
                 return;
             }
 
+            Console.WriteLine();
+            Console.WriteLine(c);
+            Console.WriteLine();
+
+            Console.Write("Entre um valor para depósito: ");
+            double valorDeposito = double.Parse(Console.ReadLine());
+            c.Deposito(valorDeposito);
+            Console.WriteLine(c);
+
+            Console.WriteLine();
+            Console.Write("Entre um valor para saque: ");
+            double valorSaque = double.Parse(Console.ReadLine());
+            c.Saque(valorSaque);
+            Console.WriteLine();
             Console.WriteLine(c);
         }
     }
