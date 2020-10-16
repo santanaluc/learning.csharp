@@ -17,5 +17,17 @@ namespace ModificadorParametros
 
             return sum;
         }
+
+        // ref vai tornar uma referência para a variável original. Sem ele retornará o mesmo valor inicial para a variável
+        public static void Triple1(ref int x)
+        {
+            x = x * 3;
+        }
+
+        //out é similar ao ref, mas nao exige que a variável seja iniciada antes de declarada
+        public static void Triple2(int inicial, out int result)
+        {
+            result = inicial * 3;
+        }
     }
 }
