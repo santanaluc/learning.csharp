@@ -44,7 +44,7 @@ namespace Composicao
 
             Console.WriteLine("Name: " + worker.Name);
             Console.WriteLine("Department: " + worker.Department.Name);
-            Console.WriteLine("Income for " + monthYear + ": " + worker.Income(year, month));
+            Console.WriteLine("Income for " + monthYear + ": " + worker.Income(year, month).ToString("F2"));
         }
     }
 }
