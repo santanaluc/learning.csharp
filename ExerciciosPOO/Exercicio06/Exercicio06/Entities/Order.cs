@@ -42,5 +42,24 @@ namespace Exercicio06.Entities
             }
             return sum;
         }
+
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append("Order moment: ");
+            sb.AppendLine(Moment.ToString("dd/MM/yyyy HH:mm:ss"));
+            sb.Append("Order Status: ");
+            //sb.AppendLine(Status);
+            sb.Append("Client: ");
+            sb.AppendLine(Client.Name + " (" + Client.Birth + ") - " + Client.Email);
+            sb.AppendLine("Order items:");
+
+            foreach (OrderItem o in Item)
+            {
+                sb.AppendLine(o.ToString());
+            }
+            sb.AppendLine("Total price: $" + Total().ToString("F2"));
+            return sb.ToString();
+        }
     }
 }

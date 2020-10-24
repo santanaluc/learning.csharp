@@ -26,5 +26,16 @@ namespace Exercicio06.Entities
         {
             return Quantity * Price;
         }
+
+        public override string ToString()
+        {
+            return Product.Name
+                + ", $"
+                + Price.ToString("F2")
+                + ", Quantity: "
+                + Quantity
+                + ", Subtotal: $"
+                + SubTotal().ToString("F2");
+        }
     }
 }
