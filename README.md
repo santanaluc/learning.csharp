@@ -1,2 +1,5 @@
 # Começando os aprendizados na linguagem C#
-<p> Com um curso mais didático e completo de C# e OO. Projetos com UML, ASP.NET, Entity Framework, LINQ, Lambda e muito mais </p>
+<p> Programação Orientada a Objetos e linguagem C# </p>
+<p> Compreender diagramas de classe UML, tanto de entidades quanto de serviços </p>
+<p> Criar soluções flexíveis, extensíveis e testáveis </p>
+<p> Aplicar o conhecimento de orientação a objetos na construção de soluções para problemas reais </p>
