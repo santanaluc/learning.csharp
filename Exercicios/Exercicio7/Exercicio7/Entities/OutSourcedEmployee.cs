@@ -9,7 +9,8 @@
 
         }
 
-        public OutSourcedEmployee(string name, int hours, double valuePerHour, double additionalCharge) : base(name, hours, valuePerHour)
+        public OutSourcedEmployee(string name, int hours, double valuePerHour, double additionalCharge) 
+            : base(name, hours, valuePerHour)
         {
             AdditionalCharge = additionalCharge;
         }
