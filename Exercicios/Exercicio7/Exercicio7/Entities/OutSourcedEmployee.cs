@@ -9,15 +9,14 @@
 
         }
 
-        public OutSourcedEmployee(double additionalCharge)
+        public OutSourcedEmployee(string name, int hours, double valuePerHour, double additionalCharge) : base(name, hours, valuePerHour)
         {
             AdditionalCharge = additionalCharge;
         }
 
         public override double Payment()
         {
-            base.Payment();
-            return AdditionalCharge *= 0.1;
+            return base.Payment() + 1.1 * AdditionalCharge;
         }
     }
 }
