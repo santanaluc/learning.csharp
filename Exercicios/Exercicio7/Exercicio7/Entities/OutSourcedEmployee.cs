@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Exercicio7.Entities
+﻿namespace Exercicio7.Entities
 {
     class OutSourcedEmployee : Employee
     {
