@@ -23,6 +23,7 @@
         {
             base.Withdraw(amount);
             Balance -= 2.0;
+            //Descontará 5 + 2 
         }
     }
 }
