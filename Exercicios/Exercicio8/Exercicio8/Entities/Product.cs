@@ -22,7 +22,7 @@ namespace Exercicio8.Entities
 
         public virtual string PriceTag()
         {
-            return Name;
+            return Name + " $ " + Price.ToString("F2");
         }
     }
 }

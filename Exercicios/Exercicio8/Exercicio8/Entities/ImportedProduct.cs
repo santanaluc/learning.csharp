@@ -20,7 +20,7 @@ namespace Exercicio8.Entities
 
         public override string PriceTag()
         {
-            return base.PriceTag() + CustomsFee;
+            return Name + " $ " + TotalPrice() + " (Customs fee: $ " + CustomsFee.ToString("F2") + ")";
         }
 
         public double TotalPrice()

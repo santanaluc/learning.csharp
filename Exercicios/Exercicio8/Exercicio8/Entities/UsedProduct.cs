@@ -20,7 +20,7 @@ namespace Exercicio8.Entities
 
         public override string PriceTag()
         {
-            return base.PriceTag();
+            return Name + " (used) $ " + Price.ToString("F2") + " (Manufacture date: " + Date.Date + ")";
         }
     }
 }
