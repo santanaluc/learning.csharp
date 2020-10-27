@@ -21,7 +21,8 @@ namespace Exercicio14.Services
             {
                 DateTime date = contract.Date.AddMonths(i);
                 double updateValue = value + _paymentService.Interest(contract.TotalValue, i);
-                _paymentService.Payment(contract.TotalValue);
+                double finalValue = updateValue + _paymentService.Payment(updateValue);
+                contract.Add(new Installment(date, finalValue));
             }
         }
     }
