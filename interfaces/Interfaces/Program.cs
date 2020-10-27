@@ -24,7 +24,8 @@ namespace Interfaces
             Console.Write("Enter price per day: ");
             double pricePerDay = double.Parse(Console.ReadLine());
 
-            RentalService rentalService = new RentalService(pricePerHour, pricePerDay);
+            RentalService rentalService = new RentalService(pricePerHour, pricePerDay, new BrazilTaxService());
+            //Instancia um aluguel com o objeto BrazilTaxService (upcast)
             rentalService.ProcessInVoice(car);
 
             Console.WriteLine("INVOICE:");
