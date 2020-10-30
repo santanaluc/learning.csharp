@@ -4,16 +4,16 @@ using System.Text;
 
 namespace HerancaMultipla.Devices
 {
-    class Printer : Device
+    class Printer : Device, IPrinter
     {
         public override void ProcessDoc(string document)
         {
             Console.WriteLine("Printer processing: " + document);
         }
         
-        public string Print(string document)
+        public void Print(string document)
         {
-            return "Printer print result";
+            Console.WriteLine("Printer print " + document);
         }
     }
 }
