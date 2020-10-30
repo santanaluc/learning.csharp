@@ -4,10 +4,11 @@ namespace Generics1
 {
     class PrintService
     {
-        private int[] _values = new int[10];
+        //object nao tem type safety
+        private object[] _values = new object[10];
         private int _count = 0;
 
-        public void AddValue(int value)
+        public void AddValue(object value)
         {
             if(_count == 10)
             {
@@ -18,7 +19,7 @@ namespace Generics1
             _count++;//atualiza o valor da variável count
         }
 
-        public int First()
+        public object First()
         {
             if (_count == 0)
             {
@@ -40,7 +41,7 @@ namespace Generics1
             {
                 Console.Write(_values[_count -1]);
             }
-            Console.Write("]");
+            Console.WriteLine("]");
         }
     }
 }
