@@ -4,11 +4,11 @@ using System.Text;
 
 namespace Exercício2.Entities
 {
-    class Course
+    class Student
     {
         public int Code { get; set; }
 
-        public Course(int code)
+        public Student(int code)
         {
             Code = code;
         }
@@ -20,12 +20,12 @@ namespace Exercício2.Entities
 
         public override bool Equals(object obj)
         {
-            if (!(obj is Course))
+            if (!(obj is Student))
             {
                 return false;
             }
 
-            Course other = obj as Course;
+            Student other = obj as Student;
             return Code.Equals(other.Code);
         }
 

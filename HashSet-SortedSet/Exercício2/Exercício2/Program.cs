@@ -8,7 +8,7 @@ namespace Exercício2
     {
         static void Main(string[] args)
         {
-            HashSet<Course> set = new HashSet<Course>();
+            HashSet<Student> set = new HashSet<Student>();
 
             Console.Write("How many students for course A? ");
             int nA = int.Parse(Console.ReadLine());
@@ -16,7 +16,7 @@ namespace Exercício2
             for (int i = 0; i < nA; i++)
             {
                 int student = int.Parse(Console.ReadLine());
-                set.Add(new Course(student));
+                set.Add(new Student(student));
             }
 
             Console.Write("How many students for course B? ");
@@ -24,8 +24,8 @@ namespace Exercício2
 
             for (int i = 0; i < nB; i++)
             {
-                int student = int.Parse(Console.ReadLine()); 
-                set.Add(new Course(student));
+                int student = int.Parse(Console.ReadLine());
+                set.Add(new Student(student));
 
             }
 
@@ -35,12 +35,12 @@ namespace Exercício2
             for (int i = 0; i < nC; i++)
             {
                 int student = int.Parse(Console.ReadLine());
-                set.Add(new Course(student));
+                set.Add(new Student(student));
             }
 
             Console.WriteLine($"Total of {set.Count} students.");
-            
-            
+
+
             /*TESTE
             foreach (Course obj in set)
             {
