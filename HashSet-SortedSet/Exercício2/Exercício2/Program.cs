@@ -10,32 +10,18 @@ namespace Exercício2
         {
             HashSet<Student> set = new HashSet<Student>();
 
-            Console.Write("How many students for course A? ");
-            int nA = int.Parse(Console.ReadLine());
+            var courseNames = "ABC";
 
-            for (int i = 0; i < nA; i++)
+            for (var i = 0; i < 3; i++)
             {
-                int student = int.Parse(Console.ReadLine());
-                set.Add(new Student(student));
-            }
+                Console.Write($"How many students for course {courseNames[i]}? ");
+                int n = int.Parse(Console.ReadLine());
 
-            Console.Write("How many students for course B? ");
-            int nB = int.Parse(Console.ReadLine());
-
-            for (int i = 0; i < nB; i++)
-            {
-                int student = int.Parse(Console.ReadLine());
-                set.Add(new Student(student));
-
-            }
-
-            Console.Write("How many students for course C? ");
-            int nC = int.Parse(Console.ReadLine());
-
-            for (int i = 0; i < nC; i++)
-            {
-                int student = int.Parse(Console.ReadLine());
-                set.Add(new Student(student));
+                for (var j = 0; j < n; j++)
+                {
+                    int student = int.Parse(Console.ReadLine());
+                    set.Add(new Student(student));
+                }
             }
 
             Console.WriteLine($"Total of {set.Count} students.");
