@@ -9,7 +9,7 @@ namespace Exercicio1
     {
         static void Main(string[] args)
         {
-            Dictionary<string, string> dict = new Dictionary<string, string>();
+            Dictionary<string, int> dict = new Dictionary<string, int>();
 
             Console.WriteLine("Enter file full path: ");
             //string path = Console.ReadLine();
@@ -22,15 +22,20 @@ namespace Exercicio1
                     {
                         string[] line = sr.ReadLine().Split(',');
                         string name = line[0];
-                        string votes = line[1];
-
-                        dict["name"] = name;
-                        dict["votes"] = votes;
-
-                        foreach (var value in dict)
+                        int numberVotes = int.Parse(line[1]);
+                        if (!dict.ContainsKey(name))
                         {
-                            Console.WriteLine(value.Key + ": " + value.Value);
+                            dict.Add(name, numberVotes);
                         }
+                        else
+                        {
+                            dict[name] += numberVotes;
+                        }
+                    }
+
+                    foreach (var item in dict)
+                    {
+                        Console.WriteLine(item.Key + ": " + item.Value);
                     }
                 }
             }
