@@ -8,8 +8,8 @@ namespace Program1
         static void Main(string[] args)
         {
             Dictionary<string, string> cookies = new Dictionary<string, string>();
-
-            cookies["user"] = "Maria";
+            string name = Console.ReadLine();
+            cookies["user"] = name;
             cookies["email"] = "maria@gmail.com";
             cookies["phone"] = "99712234";
             cookies["phone"] = "79186387"; // vai sobrescrever pois nao aceita repetições
