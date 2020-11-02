@@ -30,6 +30,7 @@ namespace Program1
 
             Console.WriteLine("Size: " + cookies.Count);
             Console.WriteLine("All cookies:");
+            //pode colocar var no lugar "KeyValuePair<string, string>"
             foreach (KeyValuePair<string, string> item in cookies)
             {
                 Console.WriteLine(item.Key + ": " + item.Value);
