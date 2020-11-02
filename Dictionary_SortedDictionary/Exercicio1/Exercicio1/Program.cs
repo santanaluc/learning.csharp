@@ -32,8 +32,6 @@ namespace Exercicio1
                             Console.WriteLine(value.Key + ": " + value.Value);
                         }
                     }
-
-                    
                 }
             }
             catch (IOException e)
