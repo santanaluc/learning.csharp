@@ -13,7 +13,7 @@ namespace ExercicioFixacao
             /*Console.Write("Enter full file path: ");
             string path = Console.ReadLine();*/
 
-            //LENDO O ARQUIVO E COLOCANDO DENTRO DA LISTA / ENTIDADE
+            //Reading the path
             var path = @"D:\csharp\Temp\in4.txt";
             Console.Write("Enter salary: ");
             var enterSalary = double.Parse(Console.ReadLine());
@@ -32,7 +32,7 @@ namespace ExercicioFixacao
                     list.Add(new Employee(name, email, salary));
                 }
             }
-            // TERMINOU DE LER O ARQUIVO E COLOCAR NA LISTA
+            // Finish of read the path and add to entities
 
             Console.WriteLine("Email of people whose salary is more than " + enterSalary.ToString("F2"));
             var emailSalary = list.Where(e => e.Salary > enterSalary).Select(e => e.Email);
