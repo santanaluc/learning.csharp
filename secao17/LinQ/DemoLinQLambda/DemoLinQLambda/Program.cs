@@ -66,6 +66,37 @@ namespace DemoLinQLambda
 
             var r9 = products.Where(p => p.Id == 30).SingleOrDefault(); // não funciona caso o resultado do where for mais de 1 resultado
             Console.WriteLine("Single or default test2 = " + r9);
+
+            //operacoes de agregação
+            var r10 = products.Max(p => p.Price);
+            Console.WriteLine("Max price: " + r10);
+            var r11 = products.Min(p => p.Price);
+            Console.WriteLine("Max price: " + r11);
+
+            var r12 = products.Where(p => p.Category.Id == 1).Sum(p => p.Price);
+            Console.WriteLine("Category 1 Sum Prices: " + r12);
+            var r13 = products.Where(p => p.Category.Id == 1).Average(p => p.Price);// se nao tiver nenhum elemento, dará erro
+            Console.WriteLine("Category 1 Average Prices: " + r13);
+
+            //default if empty
+            var r14 = products.Where(p => p.Category.Id == 5).Select(p => p.Price).DefaultIfEmpty(0.0).Average(); //era uma sequencia de produtos que foi transformada em sequencia de double (só os precos)
+            Console.WriteLine("Category 5 average prices: " + r14);
+
+            //map.reduce(de outras linguagens)                                              para nao ter erro, colocar o 0,0 antes da expressao anonima
+            var r15 = products.Where(p => p.Category.Id == 1).Select(p => p.Price).Aggregate(0.0, (x, y) => x + y); // se o resultado for vazio dará erro
+            Console.WriteLine("Category 1 aggregate sum: " + r15);
+            Console.WriteLine();
+
+            var r16 = products.GroupBy(p => p.Category);
+            foreach(var group in r16)
+            {
+                Console.WriteLine("Category " + group.Key.Name + ":");
+                foreach(var p in group)
+                {
+                    Console.WriteLine(p);
+                }
+                Console.WriteLine();
+            }
         }
     }
 }
